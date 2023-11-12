@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>clock {{hostname}}</title>
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+    <h1>zet u naam hier</h1>
+    <div>
+    Time:
+    <span id="clock">time</span>
+    </div>
+    <script>
+	    var clock = document.getElementById("clock");
+
+        setInterval(() => {
+            fetch("{{ url_for('time') }}")
+            .then(response => {
+                response.text().then(t => {clock.innerHTML = t})
+            });
+        }, 1000);  
+</script>
+</body>
+</html>
