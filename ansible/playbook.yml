@@ -1,9 +1,6 @@
 ---
 - hosts: timeapp
   become: true #become root
-  vars:
-    gituser:  #github username
-    gitpass:  #github token
   tasks:
     
     
@@ -49,7 +46,7 @@
 
     - name: Clone repo 
       ansible.builtin.git:
-        repo: 'https://{{gituser}}:{{gitpass}}@github.com/vbbryan/jenkinslabtest.git'
+        repo: 'https://github.com/vbbryan/jenkins.git'
         dest: /srv/checkout
         clone: true
 
