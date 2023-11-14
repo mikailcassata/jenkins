@@ -1,6 +1,5 @@
 ---
 - hosts: timeapp
-  become: true #become root
   tasks:
     
     
