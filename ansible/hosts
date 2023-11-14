@@ -1,6 +1,6 @@
 [servers]
 timeapp ansible_host=10.0.2.6
 [servers:vars]
-ansible_user='devops'
+ansible_user='root'
 ansible_password='devops' 
-ansible_become_pass='devops'
+
