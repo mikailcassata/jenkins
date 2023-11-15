@@ -1,4 +1,5 @@
 # update to labo
+'''
 stage('preprep') {
   try {
     sh '''
@@ -10,3 +11,4 @@ stage('preprep') {
     cd terraform
     tertaform detroy --auto-approve'''}
   catch (e) {}
+'''
